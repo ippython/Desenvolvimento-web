@@ -1,5 +1,5 @@
 function calcmedia(){
-    return (this.aluno.notas[0], this.aluno.notas[1] ) / 2;
+    return (this.notas[0] + this.notas[1] ) / 2;
 }
 
 
@@ -17,14 +17,14 @@ var aluno = {
 
 var aluno2 = {
     nome: "Bruno",
-    notas: [6, 8],
+    notas: [1, 8],
     
-     media: calcmedia()
+     media: calcmedia
 
 }
 
 console.log(aluno.nome);
-console.log(aluno.media)
+console.log(aluno.media())
 
 console.log(aluno2.nome);
-console.log(aluno2.media)
+console.log(aluno2.media())
