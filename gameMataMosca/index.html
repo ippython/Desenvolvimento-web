@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mata Moscas</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+
+<body id="body" onresize="ajustaTamanhoDoJogo()">
+
+    <img id="bg" src="assets/imagens/bg.jpg" alt="">
+    
+    <div class="painel">
+        <div class="vidas">
+            <img id="v0" src="assets/imagens/coracao_cheio.png" alt="">
+            <img id="v1" src="assets/imagens/coracao_cheio.png" alt="">
+            <img id="v2" src="assets/imagens/coracao_cheio.png" alt="">
+        </div>
+        <div id="cronometro">Tempo restante: </div>
+        <div id="pontos">Pontos: 0 </div>
+    </div>
+    <div id="inicio">
+        <img src="assets/imagens/game.png" alt="">
+        <button id="restart" onclick="botaoIniciar()">Iniciar</button>
+    </div>
+    
+    <div id="gameOver">
+        <img src="assets/imagens/game_over.png" alt="">
+        <button id="restart" onclick="restart()">Jogue novamente</button>
+    </div>
+    <div id="vitoria">
+        <img src="assets/imagens/vitoria.png" alt="">
+        <button id="restart" onclick="restart()">Jogue novamente</button>
+    </div>
+
+
+    <script src="assets/scripts/game.js"></script>
+    <script src="assets/scripts/interface.js"></script>
+</body>
+
+</html>
