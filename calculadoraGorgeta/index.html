@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+
+<body class="bg-info">
+    <form id="form" class="container card card-body text-center mt-5">
+        <div id="display">
+
+            <div class="input-group form-group">
+                <span for="" class="input-group-addon">Gorgeta</span>
+                <input type="number" id="gorgeta" disabled value="0" class="form-control">
+            </div>
+
+            <div class="input-group form-group">
+                <span for="" class="input-group-addon">Valor total</span>
+                <input type="number" id="valorTotal" disabled value="0" class="form-control">
+            </div>
+        </div>
+
+
+        <div class="input-group">
+            <label for="">Porcentagem:</label>
+            <input type="range" value="0" id="barraPorcentagemGorgeta" class="form-control ml-1 mr-2">
+            <span id="porcentagemGorgeta">0%</span>
+        </div>
+
+        <div class="input-group pt-2">
+            <label for="" class="mt-1">R$:</label>
+            <input type="number" placeholder="0" id="valor" class="form-control ml-1 mr-2 ">
+    </form>
+
+    <script src="scripts/script.js"></script>
+
+</body>
+
+</html>

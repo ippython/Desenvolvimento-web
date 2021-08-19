@@ -1,107 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
     <title>Document</title>
 
-    <style>
-        h1{
-            display: inline;
-        }
-        button{
-            display: block;
-        }
-
-    </style>
-
-    <script>
-
-        var segundos = 1;
-        var minutos = 1;
-        var horas = 1;
-        var intervaloS;
-        var intervaloM;
-        var intervaloH;
-        
-        function segundo(){
-            let s = document.getElementById("segundos");
-            s.innerHTML = segundos;
-            
-            if (segundos >= 60) {
-                
-                segundos = 0;
-                
-            }else {
-                
-                segundos++;
-            }
-        }
-        function minuto(){
-            let s = document.getElementById("minutos");
-            s.innerHTML = minutos;
-            if (minutos >= 60) {                
-                minutos = 0;                
-            }else {                
-                minutos++;
-            }
-        }
-        function hora(){
-            let s = document.getElementById("horas");
-            s.innerHTML = horas;
-            if (horas >= 24) {
-                
-                horas = 0;
-                
-            }else {
-                
-                horas++;
-
-            }
-        }
-        
-        function iniciar(){
-            intervaloS = setInterval(segundo, 1000);
-            intervaloM = setInterval(minuto, 60000);
-            intervaloH = setInterval(hora, 3600000);
-
-        }
-        
-        function parar(){
-            clearInterval(intervaloS);
-            clearInterval(intervaloM);
-            clearInterval(intervaloH);
-        }
-        
-        function zerar(){
-            segundos = 1;
-            minutos = 1;
-            horas = 1;
-            let s = document.getElementById("horas");
-            let m = document.getElementById("minutos");
-            let h = document.getElementById("segundos");
-            s.innerHTML = 0;
-            m.innerHTML = 0;
-            h.innerHTML = 0;
-            clearInterval(intervaloS);
-            clearInterval(intervaloM);
-            clearInterval(intervaloH);
-        }
-
-    </script>
+    <script src="script/script.js"></script>
 </head>
+
 <body>
 
-    <h1 id="horas">0</h1>
-    <h1>:</h1>
-    <h1 id="minutos">0</h1>
-    <h1>:</h1>
-    <h1 id="segundos">0</h1>
-    <br>
-    <input onclick="iniciar()" type="submit" value="Iniciar">
-    <input onclick="parar()" type="submit" value="Parar">
-    <input onclick="zerar()" type="submit" value="Zerar">
+    <div class="container cardcontainer card card-body text-center mt-5">
 
+
+        <p id="display" class="card m-0 fs-1">0:0:0</p>
+
+        <br>
+        <input onclick="iniciar()" type="submit" value="Iniciar">
+        <input onclick="parar()" type="submit" value="Parar">
+        <input onclick="zerar()" type="submit" value="Zerar">
+
+    </div>
 </body>
+
 </html>
