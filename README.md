@@ -1,2 +1,2 @@
-# Desenvolvimento-web
- Primeiros projetos de desenvolvimento web
+# beginnerWebDevelopment
+ Meu primeiros projetos web utilizando javascript, HTML, CSS e Bootstrap
