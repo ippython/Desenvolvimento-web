@@ -6,5 +6,8 @@ document.querySelectorAll(".colorArea .color").forEach(item => {
 
 function colorClick(e){
     let color = e.target.getAttribute('data-color')
-    console.log(color)
+    currentColor = color;
+
+    document.querySelector('.color.active').classList.remove("active")
+    e.target.classList.add("active");
 }
